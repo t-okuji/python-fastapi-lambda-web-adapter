@@ -6,6 +6,8 @@ This project is lambda function in Python.
 - `poetry` Package manager
 - `ruff` Linter and Formatter
   - `poetry run ruff <commands>`
+- `pre-commit` Git hook
+  - `poetry run pre-commit run --all-files` Run hook
 
 ## Getting started local
 ```
