@@ -1,6 +1,12 @@
 # Python + FastAPI + aws-lambda-web-adapter
 This project is lambda function in Python.
 
+## Libraries
+- `fastapi` Web framework
+- `poetry` Package manager
+- `ruff` Linter and Formatter
+  - `poetry run ruff <commands>`
+
 ## Getting started local
 ```
 docker compose up --build
