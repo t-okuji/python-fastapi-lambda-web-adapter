@@ -10,10 +10,17 @@ This project is lambda function in Python.
   - `poetry run pre-commit run --all-files` Run hook
 
 ## Getting started local
+### dev
 ```
 docker compose up --build
 http://localhost:8080
 ```
+### debug
+```
+TARGET=debug docker compose up --build
+http://localhost:8080
+```
+F5 to launch the debugger. 
 
 ## Build image
 ```
@@ -24,7 +31,7 @@ docker build --target prod -t python-lambda . --platform linux/amd64
 
 ## Push ECR
 ```
-docker tag python-lambda:latest xxxxxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com/python-lambda:latest
-aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin xxxxxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com
-docker push xxxxxxxxxxxx.dkr.ecr.ap-northeast-1.amazonaws.com/python-lambda:latest
+docker tag python-lambda:latest xxxxxxxxxxxx.dkr.ecr.<your region>.amazonaws.com/python-lambda:latest
+aws ecr get-login-password --region <your region> | docker login --username AWS --password-stdin xxxxxxxxxxxx.dkr.ecr.<your region>.amazonaws.com
+docker push xxxxxxxxxxxx.dkr.ecr.<your region>.amazonaws.com/python-lambda:latest
 ```
